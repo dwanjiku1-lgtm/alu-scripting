@@ -11,7 +11,8 @@ def count_words(subreddit, word_list, after=None, counts=None):
     if counts is None:
         counts = {}
 
-    # Duplicate keywords (case-insensitive) add up, so count each one's multiplicity
+    # Duplicate keywords (case-insensitive) add up, so track how many
+    # times each one appears in word_list
     multiplicity = {}
     for word in word_list:
         key = word.lower()
